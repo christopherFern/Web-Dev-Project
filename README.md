@@ -6,10 +6,10 @@
 
 | Member   | Role / Interest  |
 | -------- | ---------------- |
-| Ryan Warrener 100871033 | React / Frontend |
-| Christopher Fernandes 100864284 | API / Data       |
-| Brayden Johnson 100832373 | UI / Design      |
-| Kishawn Wynter 100876556 | Testing |
+| Ryan Warrener 100871033 | Movie Search and results |
+| Christopher Fernandes 100864284 | Movie representation and details      |
+| Brayden Johnson 100832373 | Favourites and saved movies |
+| Kishawn Wynter 100876556 | Ratings and reviews |
 
 ## Topic
 
