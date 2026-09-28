@@ -18,5 +18,6 @@
 Our group will build a movie-focused React application.
 
 ## Candidate Data Source
-
+- TMDB API
+- https://www.themoviedb.org/settings/api
 
