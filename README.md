@@ -8,7 +8,7 @@
 | -------- | ---------------- |
 | Ryan Warrener 100871033 | React / Frontend |
 | Christopher Fernandes 100864284 | API / Data       |
-|| UI / Design      |
+| Brayden Johnson 100832373 | UI / Design      |
 || Testing          |
 
 ## Topic
