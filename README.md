@@ -6,8 +6,8 @@
 
 | Member   | Role / Interest  |
 | -------- | ---------------- |
-|| React / Frontend |
-| Christopher Fernandes 100864284 | API / Data       |
+| Ryan Warrener 100871033 | React / Frontend ||
+|| Christopher Fernandes 100864284 | API / Data       |
 || UI / Design      |
 || Testing          |
 
