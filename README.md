@@ -1,2 +1,24 @@
-# Web-Dev-Project
-A React-based movie discovery and personal movie library application. Users will be able to search for movies, browse results, view movie details, save favourites, and manage personal ratings/reviews.
+# Movie App
+
+## Team
+
+**Team Name:** MovieVault
+
+| Member   | Role / Interest  |
+| -------- | ---------------- |
+|| React / Frontend |
+| Christopher Fernandes 100864284 | API / Data       |
+|| UI / Design      |
+|| Testing          |
+
+## Topic
+
+**Domain:** Movies
+
+Our group will build a movie-focused React application.
+
+## Candidate Data Source
+
+**API:** TMDB (The Movie Database)
+
+TMDB will be our candidate API for movie data.
