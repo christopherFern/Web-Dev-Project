@@ -25,7 +25,7 @@ Our group will build a movie-focused React application.
 Our application will be a movie database to help users discover, organize and keep track of movies they have seen and movies they want to see. It will be inspired by similar applications 
 such as letterboxd, imdb, etc. Users will be able to search through a catalog of movies and add them to their own personal library of watched movies or to a watchlist of movies they want to watch. Through their library and watchlist, users will be recommended movies that match their taste. 
 
-##API
+## API
 The Movie Database
 URL: https://www.themoviedb.org/
 JSON Sample
@@ -56,4 +56,18 @@ JSON Sample
 ## Comparitors
 Two inspirations from this project are letterboxd and IMDB. One way we will differ from these apps, will  be the focus on solving decision paralysis. Specifically the app will not just recommend trending movies but also movies based on their taste in movies. Another feature will allow users to randomly pick a movie from their watchlist to prevent them from creating an endless list of movies they will never watch.
 
-##Feature Plan
+## Feature Plan
+### Movie Search results and recommendations
+- Users will be able to search for movies by name
+- Users will be able to search 
+### Movie Representation and details
+- Users will be able to see movie posters when searching for movies
+- Users personal library will be designed like a bookshelf with dvds
+### Favorites, saved movies and watchlist
+- Users will be able to save movies to their own library or watchlist
+- Users will be able to randomly choose a movie from their watchlist to watch
+- Users will be recommended a mix of movies from their watchlist and movies they may like based on their library through their home page
+### Ratings and Reviews
+- Users will be able to rate movies out of 5
+- Users will be able to leave reviews on movies they have seen
+- Users will be able to see other user reviews and critic reviews on their homepage
