@@ -21,3 +21,39 @@ Our group will build a movie-focused React application.
 - TMDB API
 - https://www.themoviedb.org/settings/api
 
+##Topic
+Our application will be a movie database to help users discover, organize and keep track of movies they have seen and movies they want to see. It will be inspired by similar applications 
+such as letterboxd, imdb, etc. Users will be able to search through a catalog of movies and add them to their own personal library of watched movies or to a watchlist of movies they want to watch. Through their library and watchlist, users will be recommended movies that match their taste. 
+
+##API
+The Movie Database
+URL: https://www.themoviedb.org/
+JSON Sample
+```
+{
+      "adult": false,
+      "backdrop_path": "/44immBwzhDVyjn87b3x3l9mlhAD.jpg",
+      "id": 934433,
+      "title": "Scream VI",
+      "original_language": "en",
+      "original_title": "Scream VI",
+      "overview": "Following the latest Ghostface killings, the four survivors leave Woodsboro behind and start a fresh chapter.",
+      "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "popularity": 609.941,
+      "release_date": "2023-03-08",
+      "video": false,
+      "vote_average": 7.374,
+      "vote_count": 684
+}
+```
+
+## Comparitors
+Two inspirations from this project are letterboxd and IMDB. One way we will differ from these apps, will  be the focus on solving decision paralysis. Specifically the app will not just recommend trending movies but also movies based on their taste in movies. Another feature will allow users to randomly pick a movie from their watchlist to prevent them from creating an endless list of movies they will never watch.
+
+##Feature Plan
