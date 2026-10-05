@@ -73,6 +73,6 @@ Two inspirations from this project are letterboxd and IMDB. One way we will diff
 - Users will be able to see other user reviews and critic reviews on their homepage
 
 
-##Figma Sketch
+## Figma Sketch
 <img width="508" height="369" alt="image" src="https://github.com/user-attachments/assets/a32186f9-348e-4ae0-9931-c9e0717db54d" />
 
