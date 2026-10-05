@@ -1,1 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieVault</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content">Skip to main content</a>
 
+    <header>
+      <a href="index.html">MovieVault</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Discover</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1>Browse movies</h1>
+      <p>Find movies and view their details.</p>
+
+      <!-- search layout -->
+      <section>
+        <h2>Search movies</h2>
+
+        <form>
+          <label for="movie-search">Movie title</label>
+          <input
+            type="search"
+            id="movie-search"
+            name="query"
+            placeholder="Enter a movie title"
+            aria-describedby="search-note"
+          />
+          <button type="submit" disabled>Search</button>
+        </form>
+
+        <p id="search-note">Not Implemented.</p>
+      </section>
+
+      <section>
+        <h2>Popular movies</h2>
+
+        <!-- Sample movies for now. Replace with API data later. -->
+        <div class="movie-grid">
+          <article class="movie-card">
+            <h3>Inception</h3>
+            <p>2010 · Science fiction</p>
+            <p>
+              A thief who enters people's dreams takes on a job to plant an
+              idea.
+            </p>
+            <a href="details.html">View Inception details</a>
+          </article>
+
+          <article class="movie-card">
+            <h3>Interstellar</h3>
+            <p>2014 · Science fiction</p>
+            <p>
+              A team of astronauts searches for a new home as Earth becomes
+              harder to live on.
+            </p>
+          </article>
+
+          <article class="movie-card">
+            <h3>The Dark Knight</h3>
+            <p>2008 · Action</p>
+            <p>
+              Batman faces the Joker as Gotham struggles with a new wave of
+              crime.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>MovieVault</p>
+    </footer>
+  </body>
+</html>
