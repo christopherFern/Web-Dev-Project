@@ -1,6 +1,9 @@
 import HomeSection from "./HomeSection.jsx";
 import ReviewSection from "./ReviewSection.jsx";
 import { userReviews, criticReviews } from "./reviews.js";
+import { movies } from "./movies.js";
+import ReviewForm from "./ReviewForm.jsx";
+import { useState } from "react";
 
 const lists = [
   { id: 1, title: "List One" },
@@ -15,6 +18,12 @@ const updates = [
 ];
 
 export default function App() {
+  const [reviews, setReviews] = useState(userReviews);
+
+  function addReview(review) {
+    setReviews((previous) => [review, ...previous]);
+  }
+
   return (
     <>
       <nav>
@@ -34,9 +43,10 @@ export default function App() {
         <br />
         <br />
 
+        <ReviewForm movies={movies} onAddReview={addReview} />
         <ReviewSection
           title="Popular User Reviews This Week"
-          reviews={userReviews}
+          reviews={reviews}
         />
 
         <ReviewSection
