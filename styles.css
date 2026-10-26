@@ -340,3 +340,24 @@ nav a:hover, nav a:focus {
     background-color: transparent;
     box-shadow: none;
 }
+
+/* ---------- REVIEWS */
+/* give review cards room for the rating and text */
+.review-card {
+    flex: 0 0 230px;
+    aspect-ratio: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+    cursor: default;
+}
+
+.review-card h3 {
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-weight: normal;
+}

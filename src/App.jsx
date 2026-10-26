@@ -1,11 +1,6 @@
 import HomeSection from "./HomeSection.jsx";
-
-// placeholder content from the static homepage
-const reviews = [
-  { id: 1, title: "Review One" },
-  { id: 2, title: "Review Two" },
-  { id: 3, title: "Review Three" },
-];
+import ReviewSection from "./ReviewSection.jsx";
+import { userReviews, criticReviews } from "./reviews.js";
 
 const lists = [
   { id: 1, title: "List One" },
@@ -39,9 +34,15 @@ export default function App() {
         <br />
         <br />
 
-        <HomeSection title="Popular User Reviews This Week" items={reviews} />
+        <ReviewSection
+          title="Popular User Reviews This Week"
+          reviews={userReviews}
+        />
 
-        <HomeSection title="Popular Critic Reviews This Week" items={reviews} />
+        <ReviewSection
+          title="Popular Critic Reviews This Week"
+          reviews={criticReviews}
+        />
 
         <HomeSection title="Popular Lists" items={lists} />
 
