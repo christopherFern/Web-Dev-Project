@@ -6,7 +6,7 @@ export const userReviews = [
     movieTitle: "Inception",
     author: "User 1",
     rating: 5,
-    text: "Movie is the best shit I've ever seen",
+    text: "This movie is the best thing I've ever seen! The rotating hallway fight and ending still blow my mind.",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const userReviews = [
     movieTitle: "Interstellar",
     author: "User 2",
     rating: 4,
-    text: "Holy shit its SPACE!",
+    text: "Holy cow it's SPACE! Hans Zimmer's organ soundtrack carried the docking scene so hard.",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ export const userReviews = [
     movieTitle: "The Dark Knight",
     author: "User 3",
     rating: 5,
-    text: "Best Joker ever",
+    text: "Best Joker performance ever. Heath Ledger owned every single scene.",
   },
 ];
 
@@ -33,7 +33,7 @@ export const criticReviews = [
     movieTitle: "Inception",
     author: "Critic 1",
     rating: 4,
-    text: "THIS SHIT SUCKS! kinda",
+    text: "Overcomplicated exposition, kinda—but an undeniable visual spectacle.",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ export const criticReviews = [
     movieTitle: "Interstellar",
     author: "Critic 2",
     rating: 4,
-    text: "Boomer typa movie",
+    text: "Ambitious hard sci-fi epic with emotional weight, even if the third act gets wild.",
   },
   {
     id: 6,
@@ -49,6 +49,6 @@ export const criticReviews = [
     movieTitle: "The Dark Knight",
     author: "Critic 3",
     rating: 5,
-    text: "AVENGERS DOOMSDAY LEVEL OF SHIT",
+    text: "Blockbuster filmmaking at its absolute peak. Sets the standard for comic book cinema.",
   },
 ];

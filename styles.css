@@ -451,3 +451,111 @@ nav a:focus {
   outline: 2px solid var(--text-primary);
   outline-offset: 3px;
 }
+
+.shelf-section {
+  display: block;
+}
+
+nav a.nav-active {
+  background-color: var(--bg-surface-hover);
+  outline: 2px solid var(--accent-red);
+}
+
+.item-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.item-card-meta {
+  color: var(--text-primary);
+  opacity: 0.85;
+  font-size: 0.8rem;
+}
+
+.shelf-badge {
+  background-color: var(--bg-main);
+  color: #facc15;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.item-card-active {
+  outline: 3px solid #facc15;
+  transform: translateY(-5px);
+}
+
+.genre-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.genre-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--text-secondary);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font: inherit;
+  transition: var(--transition);
+}
+
+.genre-btn:hover,
+.genre-btn-active {
+  background-color: var(--accent-red);
+  border-color: var(--text-primary);
+}
+
+.movie-detail-banner {
+  background-color: var(--bg-surface);
+  border-left: 4px solid var(--accent-red);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.movie-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.movie-detail-sub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.movie-detail-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.shelf-toggle-btn,
+.close-detail-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--text-primary);
+  border-radius: 4px;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.shelf-toggle-btn:hover {
+  background-color: var(--accent-red);
+}
+
+.close-detail-btn:hover {
+  background-color: var(--bg-surface-hover);
+}
