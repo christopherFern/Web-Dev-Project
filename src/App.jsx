@@ -26,6 +26,11 @@ export default function App() {
   const [loadingMovies, setLoadingMovies] = useState(true);
   const [movieError, setMovieError] = useState("");
   const movieCarouselRef = useRef(null);
+  const recentCarouselRef = useRef(null);
+  const [recentMovies, setRecentMovies] = useState([]);
+  const [loadingRecent, setLoadingRecent] = useState(true);
+  const [recentError, setRecentError] = useState("");
+
   useEffect(() => {
     const controller = new AbortController();
 
@@ -59,8 +64,41 @@ export default function App() {
     return () => controller.abort();
   }, []);
 
-  function scrollMovies(direction) {
-    const carousel = movieCarouselRef.current;
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadRecentMovies() {
+      try {
+        setLoadingRecent(true);
+        setRecentError("");
+
+        const data = await fetchTmdb(
+          "/movie/now_playing",
+          controller.signal,
+        );
+
+        if (!Array.isArray(data.results)) {
+          throw new Error("TMDB returned an unexpected response.");
+        }
+
+        setRecentMovies(data.results);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          setRecentError(error.message);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setLoadingRecent(false);
+        }
+      }
+    }
+
+    loadRecentMovies();
+    return () => controller.abort();
+  }, []);
+
+  function scrollMovies(direction, carouselId) {
+    const carousel = carouselId.current;
     if (!carousel) return;
 
     const firstCard = carousel.querySelector(".movie-card");
@@ -85,9 +123,43 @@ export default function App() {
       </nav>
 
       <main className="container">
-        <header className="hero">
+        {/* <header className="hero">
           <h1>Recent Releases</h1>
-        </header>
+        </header> */}
+
+        <section className="movie-section" aria-labelledby="recent-heading">
+          <h2 id="recent-heading">Recent Releases</h2>
+
+          {loadingRecent && <p role="status">Loading movies…</p>}
+          {recentError && <p role="alert">{recentError}</p>}
+
+          {!loadingRecent && !recentError && (
+            <div className="movie-carousel">
+              <button className="carousel-button" type="button" aria-label="Show previous recent movies" aria-controls="recent-movies" onClick={() => scrollMovies(-3, recentCarouselRef)}>
+                &larr;
+              </button>
+              <div className="movie-grid" id="recent-movies" ref={recentCarouselRef} role="region" aria-label="Recent movies" tabIndex={0}>
+                {recentMovies.map((movie) => (
+                  <article className="movie-card" key={movie.id}>
+                    {movie.poster_path ? (
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        alt={`Poster for ${movie.title}`}
+                      />
+                    ) : (
+                      <div className="poster-fallback">Poster unavailable</div>
+                    )}
+                  </article>
+                ))}
+              </div>
+              <button className="carousel-button" type="button" aria-label="Show next recent movies" aria-controls="recent-movies" onClick={() => scrollMovies(3, recentCarouselRef)}>
+                &rarr;
+              </button>
+            </div>
+          )}
+        </section>
+
+
         <section className="movie-section" aria-labelledby="trending-heading">
           <h2 id="trending-heading">Trending this week</h2>
 
@@ -96,7 +168,7 @@ export default function App() {
 
           {!loadingMovies && !movieError && (
             <div className="movie-carousel">
-              <button className="carousel-button" type="button" aria-label="Show previous trending movies" aria-controls="trending-movies" onClick={() => scrollMovies(-3)}>
+              <button className="carousel-button" type="button" aria-label="Show previous trending movies" aria-controls="trending-movies" onClick={() => scrollMovies(-3, movieCarouselRef)}>
                 &larr;
               </button>
               <div className="movie-grid" id="trending-movies" ref={movieCarouselRef} role="region" aria-label="Trending movies" tabIndex={0}>
@@ -113,7 +185,7 @@ export default function App() {
                   </article>
                 ))}
               </div>
-              <button className="carousel-button" type="button" aria-label="Show next trending movies" aria-controls="trending-movies" onClick={() => scrollMovies(3)}>
+              <button className="carousel-button" type="button" aria-label="Show next trending movies" aria-controls="trending-movies" onClick={() => scrollMovies(3, movieCarouselRef)}>
                 &rarr;
               </button>
             </div>
