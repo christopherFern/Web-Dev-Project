@@ -451,3 +451,50 @@ nav a:focus {
   outline: 2px solid var(--text-primary);
   outline-offset: 3px;
 }
+
+.movie-section {
+  display: block;
+}
+.movie-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.movie-grid {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+}
+.movie-card {
+  flex: 0 0 150px;
+  scroll-snap-align: start;
+}
+.carousel-button {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--text-secondary);
+  border-radius: 50%;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.movie-card img,
+.poster-fallback {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.poster-fallback {
+  display: grid;
+  place-items: center;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  text-align: center;
+}
