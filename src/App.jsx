@@ -3,7 +3,7 @@ import ReviewSection from "./ReviewSection.jsx";
 import { userReviews, criticReviews } from "./reviews.js";
 import { movies } from "./movies.js";
 import ReviewForm from "./ReviewForm.jsx";
-import { useState } from "react";
+import useSavedReviews from "./useSavedReviews.js";
 
 const lists = [
   { id: 1, title: "List One" },
@@ -18,11 +18,7 @@ const updates = [
 ];
 
 export default function App() {
-  const [reviews, setReviews] = useState(userReviews);
-
-  function addReview(review) {
-    setReviews((previous) => [review, ...previous]);
-  }
+  const { reviews, addReview, saveFailed } = useSavedReviews();
 
   return (
     <>
@@ -44,9 +40,15 @@ export default function App() {
         <br />
 
         <ReviewForm movies={movies} onAddReview={addReview} />
+        {saveFailed && (
+          <p role="status">
+            Your review is visible, but this browser could not save it for
+            later.
+          </p>
+        )}
         <ReviewSection
           title="Popular User Reviews This Week"
-          reviews={reviews}
+          reviews={[...reviews, ...userReviews]}
         />
 
         <ReviewSection
